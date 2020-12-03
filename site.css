@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+    color: #ccc;
+}
+
+header {
+    background-color: burlywood;
+    color: black;
+}
+
+main {
+    background-color: peachpuff;
+    color: black;
+}
+
+section  article  p {
+    padding: 2em;
+     background-color: #ccc;
+     color: #333;
+}
