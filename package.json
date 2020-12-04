@@ -1,0 +1,24 @@
+{
+  "name": "clymystrata.github.io",
+  "version": "1.0.0",
+  "description": "Home page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clymystrata/clymystrata.github.io.git"
+  },
+  "keywords": [
+    "react",
+    "SPA",
+    "website"
+  ],
+  "author": "rsmellow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clymystrata/clymystrata.github.io/issues"
+  },
+  "homepage": "https://github.com/clymystrata/clymystrata.github.io#readme"
+}
