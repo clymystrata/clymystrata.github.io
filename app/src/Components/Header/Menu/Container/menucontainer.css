@@ -1,0 +1,6 @@
+.menu-container {
+    grid-area: nav;
+    background-color: darkslategray;
+    color: wheat;
+}
+
