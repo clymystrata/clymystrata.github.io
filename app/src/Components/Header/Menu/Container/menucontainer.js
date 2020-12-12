@@ -1,4 +1,4 @@
-import './menucontainer.css'
+import './menucontainer.scss'
 import MenuIcon from '../../../../assets/menu.svg';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'

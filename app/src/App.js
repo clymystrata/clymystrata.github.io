@@ -1,5 +1,5 @@
-import './reset.css'
-import './App.css'
+import './reset.scss'
+import './App.scss'
 import Heading from './Components/Header'
 
 function App() {

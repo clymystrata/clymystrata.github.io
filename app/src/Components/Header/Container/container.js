@@ -1,4 +1,4 @@
-import './container.css'
+import './container.scss'
 import Content from '../Content'
 import Menu from '../Menu'
 import Container from 'react-bootstrap/Container'

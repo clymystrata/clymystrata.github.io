@@ -1,4 +1,4 @@
-import './content.css'
+import './content.scss'
 
 
 function Content (props) {
