@@ -1,8 +1,66 @@
-.App {
-  text-align: left;
+header {
+  display: grid;
+  grid-template-columns: 3fr  1fr;
+
 }
 
-.App-link {
-  color: #61dafb;
+#nav-container {
+  position: relative;
+  grid-column: 2;
+}
+
+#content-container {
+  grid-column: 1;
+}
+
+$siteBackColor: rgba(63, 63, 63, 1);
+$siteTextColor: rgba(200,200,200,1);
+$siteHeadingColor: rgba(235, 255, 235, 1);
+
+@mixin dropShadow($color) {
+  text-shadow: 1px 1px 3px darken($color, 10%);
+    
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rec(0,0,0,0);
+    border: 0;
+}
+
+header {
+  color: $siteTextColor;
+}
+
+#nav-container {
+  background-color: $siteBackColor;
+  padding: 0;
+}
+
+#content-container {
+  background-color: $siteBackColor;
+  padding: 1em;
+
+  h1 {
+    font-size: 2.75em;
+    letter-spacing: .05em;
+    margin: 0;
+    font-weight: 800;
+    color: $siteHeadingColor;
+
+    @include dropShadow($siteBackColor);
+  }
 }
 
