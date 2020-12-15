@@ -1,0 +1,32 @@
+@use '../../../base';
+
+.menu-toggle {
+    display: inline-block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: base.$itemColor;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    color: base.$navSelColor;
+}
+
+#main-menu-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+a#main-menu-toggle:hover {
+  color: base.$itemHover;
+}
+
+@media (min-width: 768px) {
+   
+    .menu-toggle,
+    .main-menu .menu-close {
+        display: none;
+    }
+}  

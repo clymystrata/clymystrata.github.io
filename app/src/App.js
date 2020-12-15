@@ -1,12 +1,9 @@
 import './reset.scss'
 import './App.scss'
-import Heading from './Components/Header'
+import Page from './Components/Page'
 
 function App() {
-  return (
-        <Heading />        
-      
-      );
+  return  <Page />        
 }
 
-export default App;
+export default App

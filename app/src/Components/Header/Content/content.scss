@@ -1,26 +1,23 @@
+@use '../../base';
 
-div.header-content {
-    text-align: left;
-    vertical-align: top;
-    background-color: #ccc;
-    color: #333;
-    padding: .5em ;
-    grid-area: content;
-}
+#content-container {
+    background-color: base.$siteBackColor;
+    padding: .5em 1em;
+  
+    h1 {
+      font-size: 2.25em;
+      letter-spacing: .05em;
+      margin: 0;
+      font-weight: 800;
+      color: base.$siteHeadingColor;
+  
+      @include base.dropShadow(darken(base.$siteBackColor, 25%));
+    }
 
-div.header-content h1 {
-    color: black;
-}
-
-div.header-content h2 {
-    color: #666;
-}
-
-div.header-content p {
-    color: darkgreen;
-}
-
-div.header-content p::first-letter {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: x-large;
-}
+    h2 {
+        color: darken(base.$siteHeadingColor, 10%);
+        margin-top: .75em;
+        padding-left: .25em;
+    }
+  }
+  

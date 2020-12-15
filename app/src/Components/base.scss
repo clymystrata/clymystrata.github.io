@@ -1,0 +1,46 @@
+$navSelColor: rgba(123, 123, 123, 1);
+$navLinkColor: rgba(255,255,255, 1);
+$siteBackColor: rgba(63, 63, 63, 1);
+$siteTextColor: rgba(200,200,200,1);
+$siteHeadingColor: rgb(255, 251, 235);
+
+$itemColor: #ccc;
+$itemHover: #fff;
+$backColor: #1a1a1a;
+$backHover: #333;
+$boxShadow: rgba(0,0,0,.25);
+
+
+@mixin dropShadow($color) {
+  text-shadow: 1px 1px 3px darken($color, 10%);
+    
+}
+
+@mixin prefix($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+  #{$property}: $value;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rec(0,0,0,0);
+    border: 0;
+}
+
+header {
+  color: $siteTextColor;
+}
+
+#nav-container {
+  background-color: $siteBackColor;
+  padding: 0;
+}
+
+

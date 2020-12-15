@@ -1,3 +1,4 @@
-import Heading from './Container'
+import Content from './Content'
+import Menu from './Menu'
 
-export default Heading
+export { Content, Menu }
