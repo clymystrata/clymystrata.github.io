@@ -1,5 +1,5 @@
 import './page.scss'
-import { Content, Menu } from '../Header'
+import Header from '../Header'
 
 const content = {
     Title: `Clymystrata`,
@@ -7,16 +7,29 @@ const content = {
     Text: ``
 }
 
-
+const links = [
+    {
+        href:'/',
+        rel:'',
+        target:'_top',
+        text:'Home'
+    }, {
+        href:'http://rsmellow.com/me',
+        rel:'noreferrer',
+        target:'_blank',
+        text:'About'
+    }, {
+        href:'http://tech.rsmellow.net',
+        rel:'noreferrer',
+        target:'_blank',
+        text:'Tech\u00a0Blog'
+    }
+]
 
 function Page(props) {
         return (
-        <header>
-            <Content Title={content.Title}
-                     SubTitle={content.SubTitle} 
-                     Text={content.Text} />
-            <Menu />
-       </header>
+            <Header content={content}
+                    links= {links} />
     )
 }
 

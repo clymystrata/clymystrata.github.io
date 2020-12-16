@@ -1,0 +1,27 @@
+@use '../../../../base';
+
+div#links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu:target div,
+.main-menu[aria-expanded="true"] div {
+  position: relative;
+  z-index: 1000;
+}
+
+
+@media (min-width: 768px) {
+
+div#links {
+    /* Undo off-canvas styling */
+    display: grid;
+    grid-template-columns: fit-content(33%) fit-content(33%) fit-content(33%);
+    width:min-content;
+    margin:0 0 0 auto;
+    background: none;
+  }
+}
+ 

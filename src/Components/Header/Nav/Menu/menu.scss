@@ -1,0 +1,41 @@
+@use '../../../base';
+
+.main-menu {
+    position: absolute;
+    top: 35px;
+    right: 5px;
+    transition: right 0.3s ease,
+                box-shadow 0.3s ease;
+    z-index: 999;
+    display:none;
+}
+
+/*
+ On small devices, allow it to toggle...
+*/
+/*
+ :target for non-JavaScript
+ [aria-expanded] will be used if/when JavaScript is added to improve interaction, though it's completely optional.
+*/
+.main-menu:target,
+.main-menu[aria-expanded="true"] {
+  display: block;
+  outline: none;
+  @include base.prefix(box-shadow, 0 0 3px base.$boxShadow, moz webkit);
+  
+}
+
+@media (min-width: 768px) {
+    
+      /* Undo positioning of off-canvas menu */
+    .main-menu {
+        display: block;
+        position: relative;
+        top: 5px;
+        right: 5px;
+        left: auto;
+        @include base.prefix(box-shadow, none !important, moz webkit);
+    }
+
+
+  }

@@ -23,6 +23,31 @@ a#main-menu-toggle:hover {
   color: base.$itemHover;
 }
 
+#main-menu-close {
+  line-height: 1em;
+  font-size: 1.15em;
+  text-align: right;
+  background-color: base.$siteBackColor;
+  padding: 0 .5em;
+}
+
+.menu-close {
+  position: absolute;
+  left: 0;
+  right: .1em;
+  top: -1.35em;
+  
+
+  color: base.$itemColor;
+  background: base.$backColor;
+}
+
+.main-menu:target .menu-close,
+.main-menu[aria-expanded="true"] .menu-close {
+  z-index: 1001;
+}
+
+
 @media (min-width: 768px) {
    
     .menu-toggle,

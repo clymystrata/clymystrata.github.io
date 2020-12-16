@@ -1,4 +1,3 @@
-import Content from './Content'
-import Menu from './Menu'
+import Header from './header.js'
 
-export { Content, Menu }
+export default Header

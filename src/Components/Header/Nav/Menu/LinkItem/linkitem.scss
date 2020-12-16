@@ -1,0 +1,41 @@
+@use '../../../../base';
+
+a.linkitem {
+    display: block;
+    padding: .75em 15px;
+    line-height: .75em;
+    font-size: 1em;
+    color: base.$navSelColor;
+    background-color: base.$backHover;
+    text-decoration: none;
+}
+
+a.linkitem:first-child {
+    border-top: 1px solid base.$backColor;
+}
+
+a.linkitem:hover,
+a.linkitem:focus {
+    background-color: base.$backColor;
+    color: base.$itemHover;
+}
+
+
+@media (min-width: 768px) {
+    a.linkitem {
+        border: 0 !important; /* Remove borders from off-canvas styling */
+        color: base.$itemColor;
+        padding: .5em 1em;
+        line-height: .5em;
+        font-size: 1em;
+        display: inline-block;
+        background-color: base.$siteBackColor;
+      }
+
+      a.linkitem:hover,
+      a.linkitem:focus {
+        background: none; /* Remove background from off-canvas styling */
+        color: base.$itemHover;
+      }
+
+}

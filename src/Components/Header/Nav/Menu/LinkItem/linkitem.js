@@ -1,8 +1,9 @@
-import './menuitem.scss'
+import './linkitem.scss'
 
-function MenuItem(props) {
+function LinkItem(props) {
     return (
         <a 
+            key={props.key}
             id={props.id}
             className={props.className}
             href={props.href}
@@ -12,3 +13,5 @@ function MenuItem(props) {
         </a>
     )
 }
+
+export default LinkItem
