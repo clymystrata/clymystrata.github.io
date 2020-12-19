@@ -1,35 +1,51 @@
 import './page.scss'
-import Header from '../Header'
 
-const content = {
+import Header from '../Header'
+import {HomePage, AboutPage } from '../Body'
+import Menu from '../Header/Nav/Menu'
+import { HashRouter, Switch, Route } from 'react-router-dom'
+
+
+const headerContent = {
     Title: `Clymystrata`,
-    SubTitle: `Nothing's been settled.`,
+    SubTitle: `Nothing's been settled`,
     Text: ``
 }
 
-const links = [
+const headerLinks = [
     {
-        href:'/',
-        rel:'',
-        target:'_top',
+        navTo: '/',
         text:'Home'
     }, {
-        href:'http://rsmellow.com/me',
-        rel:'noreferrer',
-        target:'_blank',
+        navTo: '/about',
         text:'About'
     }, {
-        href:'http://tech.rsmellow.net',
-        rel:'noreferrer',
-        target:'_blank',
+        navTo: '/tech',
+        // need the Unicode instead of &nbsp; since react escapes variable text
         text:'Tech\u00a0Blog'
     }
 ]
 
 function Page(props) {
         return (
-            <Header content={content}
-                    links= {links} />
+            <HashRouter basename='/'>
+                <Header content={headerContent} links={headerLinks} />
+                <Switch>
+                    <Route path="/main-menu">
+                        <Menu />
+                    </Route>
+                    <Route path="/tech">
+                        <HomePage />    
+                    </Route>
+                    <Route path="/about">
+                        <AboutPage  />    
+                    </Route>
+                    
+                    <Route exact path="/">
+                        <HomePage />    
+                    </Route>
+                </Switch>
+            </HashRouter>
     )
 }
 

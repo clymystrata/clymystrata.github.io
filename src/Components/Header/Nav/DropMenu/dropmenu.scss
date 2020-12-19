@@ -1,0 +1,46 @@
+@use '../../../base';
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rec(0,0,0,0);
+    border: 0;
+  }
+  
+  nav#main-menu button {
+      display: inline-block;
+      padding: 2px;
+      line-height: 1em;
+      font-size: 1em;
+      color: base.$siteLinkColor;
+      background-color:inherit;
+  }
+  
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+      color: base.$siteLinkHover;
+      background-color: base.$siteLinkColor;
+  }
+  
+  button.menu-toggle {
+    position: absolute;
+    top: -27px;
+    right: 0;
+  }
+  
+  .menu-toggle:hover {
+    color: base.$siteLinkHover;
+    background-color: base.$siteLinkColor;
+  }
+  
+  @media (min-width: 768px) {
+     
+      .menu-toggle,
+      .main-menu .menu-close {
+          display: none;
+      }
+  }  

@@ -1,23 +1,27 @@
 @use '../../base';
 
 #content-container {
-    background-color: base.$siteBackColor;
     padding: .5em 1em;
   
     h1 {
+      font-family: Philosopher;
       font-size: 2.25em;
       letter-spacing: .05em;
       margin: 0;
       font-weight: 800;
       color: base.$siteHeadingColor;
   
-      @include base.dropShadow(darken(base.$siteBackColor, 25%));
+      @include base.dropShadow(base.$siteTextColor);
     }
 
     h2 {
+        font-family: Roboto;
+        font-size: small;
         color: darken(base.$siteHeadingColor, 10%);
-        margin-top: .75em;
-        padding-left: .25em;
+        margin-top: .5em;
+        padding-left: 2.3em;
+        letter-spacing: .1em;
+        font-weight: normal;
     }
   }
   

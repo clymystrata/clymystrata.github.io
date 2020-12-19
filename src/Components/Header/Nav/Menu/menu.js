@@ -1,7 +1,5 @@
 import './menu.scss'
-import {ToggleClose} from '../Toggle'
 import LinkContainer from './LinkContainer'
-
 
 function Menu(props) {
     return (
@@ -9,7 +7,6 @@ function Menu(props) {
             role="navigation" 
             className="main-menu"
             aria-label="Main menu">
-            <ToggleClose />
             <LinkContainer links={props.links} />
         </nav>
     )

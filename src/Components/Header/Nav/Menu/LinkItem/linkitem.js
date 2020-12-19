@@ -1,16 +1,14 @@
 import './linkitem.scss'
+import { Link } from 'react-router-dom'
 
 function LinkItem(props) {
     return (
-        <a 
-            key={props.key}
-            id={props.id}
-            className={props.className}
-            href={props.href}
-            target={props.target} 
-            rel={props.rel}>
+        <Link   to={props.navTo} 
+                key={props.key}
+                id={props.id}
+                className={props.className}>
             {props.text}
-        </a>
+        </Link>
     )
 }
 

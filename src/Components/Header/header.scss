@@ -1,9 +1,10 @@
 @use '../base';
 
 header {
+    background-color: base.$siteBackColor;
     display: grid;
     grid-template-columns: 3fr  1fr;
-    border-bottom: 3px ridge white;
+    
  }
   
 #content-container {
