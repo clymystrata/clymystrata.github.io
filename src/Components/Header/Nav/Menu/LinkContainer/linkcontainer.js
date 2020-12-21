@@ -4,13 +4,13 @@ import LinkItem from '../LinkItem'
 function LinkContainer(props) {
     const links = props.links
     return (
-        <div id="links" >
+        <div id="links">
             {links.map((link, i) => 
                 <LinkItem navTo =       {link.navTo}
                           id    =       {link.id}
                           className =   'linkitem'
-                          text  =       {link.text} />
-
+                          text  =       {link.text} 
+                          navHandler =  {props.clickHandler} />
             )}
         </div>
     )

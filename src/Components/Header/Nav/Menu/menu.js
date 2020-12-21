@@ -7,7 +7,7 @@ function Menu(props) {
             role="navigation" 
             className="main-menu"
             aria-label="Main menu">
-            <LinkContainer links={props.links} />
+            <LinkContainer links={props.links} clickHandler = {e => null}/>
         </nav>
     )
 }

@@ -6,7 +6,8 @@ function LinkItem(props) {
         <Link   to={props.navTo} 
                 key={props.key}
                 id={props.id}
-                className={props.className}>
+                className={props.className}
+                onClick = {e => props.navHandler(e)}>
             {props.text}
         </Link>
     )

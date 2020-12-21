@@ -18,11 +18,24 @@ article h3 {
     font-size: larger;
     font-weight: bold;
     letter-spacing: .012em;
-    margin: .25em 0 1em 0;
+    margin: .5em 0 ;
 }
 
 article p {
     padding: 0 .5em;
+}
+
+article p span.h3 {
+    color: base.$siteHeadingColor;
+    font-size: larger;
+    font-weight: bold;
+    letter-spacing: .012em;
+}
+
+article p span.aside {
+    font-weight: lighter;
+    font-style: italic;
+    font-size: smaller;
 }
 
 

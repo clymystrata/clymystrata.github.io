@@ -12,7 +12,6 @@ class DropMenu extends React.Component {
     }
 
     toggleMenu (e) {
-        e.preventDefault()
         this.setState(prev => { 
             const iClass = prev.showMenu ? "fa fa-bars" : "fa fa-close"
             return {showMenu: !prev.showMenu, iClass: iClass} 
@@ -30,7 +29,7 @@ class DropMenu extends React.Component {
                 </button>
                 { 
                     this.state.showMenu &&
-                    <LinkContainer links={this.props.links} />
+                    <LinkContainer links={this.props.links} clickHandler = {this.toggleMenu} />
                 }
             </nav>
         )
