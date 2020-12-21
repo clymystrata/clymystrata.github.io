@@ -1,5 +1,7 @@
 import './homepage.scss'
 import photo from '../../../assets/PiperKiss.jpg'
+import AboutPage from '../AboutPage'
+import {Link} from 'react-router-dom'
 
 function HomePage(props) {
     return (
@@ -8,11 +10,9 @@ function HomePage(props) {
                     <article>
                         <h3>Welcome!</h3>
                         <p>I'm glad you made it.</p>
-                        <p>For a different approach, click the button:
-                        <button>Use .net</button></p>
-                        <p>The about page has words about this site.</p>
-                        <p>This is Piper with chapped lips.</p>
-                        
+                        <p>The <Link to='/about'
+                                     className="page-link">about page</Link> has words about this site.</p>
+                        <p>This is my daughter Piper:</p>
                     </article>
                 </section>
                 <section className="photo">
