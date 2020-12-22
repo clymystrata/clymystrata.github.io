@@ -11,8 +11,18 @@
       font-weight: 800;
       color: base.$siteHeadingColor;
   
-      @include base.dropShadow(base.$siteTextColor);
+      @include base.dropShadow(base.$siteTextColor, 2px);
     }
+
+    h1 a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        color: lighten(base.$siteHeadingColor, 50%);
+      }
+    }
+
 
     h2 {
         font-family: Roboto;

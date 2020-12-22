@@ -13,8 +13,8 @@ function AboutPage(props) {
                         cannot be fathomed <span className="aside">(let alone known)</span> via <a  
                                 href="https://en.wikipedia.org/wiki/Wikipedia:Autobiography#The_problem_with_autobiographies" 
                                 target="_blank" 
-                                rel="noopener noreferrer">autobiographical blurbs</a> posted here and there on the Internet. That 
-                                being said, here are links to some autobiographical blurbs I've posted here and there on the Internet:
+                                rel="noopener noreferrer">autobiographical blurbs</a> posted here and there on the Internet.</p>
+                        <p>That being said, here are links to some autobiographical blurbs I've posted here and there on the Internet:
                         <ul>
                             <li><a href="http://www.linkedin.com/in/rsmellow" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                             <li><a href="https://github.com/rsmellow" target="_blank" rel="noopener noreferrer">GitHub</a></li>

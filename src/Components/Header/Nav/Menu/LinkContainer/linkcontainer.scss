@@ -18,7 +18,6 @@ div#links {
 @media (min-width: 768px) {
 
 div#links {
-    /* Undo off-canvas styling */
     display: grid;
     grid-template-columns: fit-content(33%) fit-content(33%) fit-content(33%);
     width:min-content;

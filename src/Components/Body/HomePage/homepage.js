@@ -1,6 +1,5 @@
 import './homepage.scss'
 import photo from '../../../assets/PiperKiss.jpg'
-import AboutPage from '../AboutPage'
 import {Link} from 'react-router-dom'
 
 function HomePage(props) {

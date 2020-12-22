@@ -59,39 +59,40 @@ $gradient-radial: radial-gradient(#E7DAD2ff, #FBE5F4ff, #BB9325ff, #4F5747ff, #A
 /***** End Rose Photo Pallet  **************/
 
 
-$champagne-pink: rgba(231, 218, 210, 1);
+
 $pale-purple-pantone: rgba(251, 229, 244, 1);
-$satin-sheen-gold: rgba(187, 147, 37, 1);
-$ebony: rgba(79, 87, 71, 1);
-$laurel-green: rgba(167, 182, 163, 1);
-
-$space-cadet: rgba(30, 45, 72, 1);
-$lilac-luster: rgba(192, 155, 175, 1);
-$pine-tree: rgba(36, 46, 15, 1);
-$desert-sand: rgba(225, 203, 183, 1);
+$satin-sheen-gold:    rgba(187, 147, 37, 1);
+$ebony:               rgba(79, 87, 71, 1);
+$laurel-green:        rgba(167, 182, 163, 1);
+$banana-mania:        rgba(253, 236, 190, 1);
+$space-cadet:         rgba(30, 45, 72, 1);
+$pine-tree:           rgba(36, 46, 15, 1);
+$desert-sand:         rgba(225, 203, 183, 1);
 $queen-pink: rgba(232, 216, 224, 1);
+$lilac-luster: rgba(192, 155, 175, 1);
+$pink-lace: rgba(254, 219, 247, 1);
 
+
+$champagne-pink: rgba(231, 218, 210, 1);
 $cafe-noir: rgba(77, 59, 37, 1);
 $shadow: rgba(145, 119, 84, 1);
-$banana-mania: rgba(253, 236, 190, 1);
 $bittersweet-shimmer: rgba(181, 86, 84, 1);
-$pink-lace: rgba(254, 219, 247, 1);
+
 
 
 $siteBackColor:       $champagne-pink;
 $siteTextColor:       $cafe-noir;
-$siteHeadingColor:    lighten($siteTextColor, 25%);
-$siteAccentColor:     $lilac-luster;
-
+$siteAccentColor:     $shadow;
 $siteLinkColor:       $bittersweet-shimmer;
-$siteLinkHover:       lighten($siteLinkColor, 50%);
 
+$siteHeadingColor:    lighten($siteTextColor, 25%);
+$siteLinkHover:       lighten($siteLinkColor, 50%);
 $siteBorderColor:     darken($siteAccentColor, 25%);
 $boxShadow:           darken($siteBorderColor, 25%);
 
 
-@mixin dropShadow($color) {
-  text-shadow: 1px 1px 2px darken($color, 10%);
+@mixin dropShadow($color, $blur) {
+  text-shadow: 1px 1px $blur darken($color, 10%);
     
 }
 
@@ -100,6 +101,14 @@ $boxShadow:           darken($siteBorderColor, 25%);
     -#{$prefix}-#{$property}: $value;
   }
   #{$property}: $value;
+}
+
+@mixin pageTitle() {
+  color: $siteHeadingColor;
+  font-size: larger;
+  font-weight: bold;
+  letter-spacing: .05em;
+  @include dropShadow($siteTextColor, 0);
 }
 
 body {
