@@ -9,14 +9,13 @@ a.linkitem {
     text-decoration: none;
 }
 
-a.linkitem:first-child {
-    border-top: 1px solid base.$siteBorderColor;
-}
-
 a.linkitem:hover,
 a.linkitem:focus {
     color: base.$siteLinkHover;
+    outline: 0;
+    border: 0;
 }
+
 
 
 @media (min-width: 768px) {

@@ -5,6 +5,7 @@ div#links {
     margin: 0;
     padding: 0;
     background-color: darken(base.$siteBackColor,10%);
+    border: 1px solid base.$siteBorderColor;
 }
 
 .main-menu:target div,

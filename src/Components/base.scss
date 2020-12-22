@@ -84,10 +84,7 @@ $siteHeadingColor:    lighten($siteTextColor, 25%);
 $siteAccentColor:     $lilac-luster;
 
 $siteLinkColor:       $bittersweet-shimmer;
-$siteLinkHover:       lighten($siteLinkColor, 35%);
-
-// $navSelColor:         $lilac-luster;
-// $navLinkColor:        $queen-pink;
+$siteLinkHover:       lighten($siteLinkColor, 50%);
 
 $siteBorderColor:     darken($siteAccentColor, 25%);
 $boxShadow:           darken($siteBorderColor, 25%);

@@ -11,32 +11,29 @@
     border: 0;
   }
   
-  nav#main-menu button {
+  button.menu-toggle {
       display: inline-block;
+      position: absolute;
+      top: -27px;
+      right: 0;
+      border: 0;
       padding: 2px;
       line-height: 1em;
       font-size: 1em;
       color: base.$siteLinkColor;
       background-color:inherit;
+
+      &:focus, &:hover {
+        outline: 0;
+        border: 0;
+      }
+
+      &:hover {
+        color: base.$siteLinkHover;
+      }
   }
   
-  .menu-toggle:hover,
-  .menu-toggle:focus {
-      color: base.$siteLinkHover;
-      background-color: base.$siteLinkColor;
-  }
-  
-  button.menu-toggle {
-    position: absolute;
-    top: -27px;
-    right: 0;
-  }
-  
-  .menu-toggle:hover {
-    color: base.$siteLinkHover;
-    background-color: base.$siteLinkColor;
-  }
-  
+    
   @media (min-width: 768px) {
      
       .menu-toggle,
