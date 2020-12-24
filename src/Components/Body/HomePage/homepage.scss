@@ -6,7 +6,6 @@ main#home-page {
     background-color: lighten(base.$siteBackColor, 10%);
     color: base.$siteTextColor;
     padding: 1em;
-    border: 1px solid base.$siteBorderColor;
 }
 
 section.content {
@@ -69,7 +68,6 @@ article p {
 
 @media (min-width: 768px) {
     main#home-page {
-        width: 80%;
         margin: auto;
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -84,7 +82,6 @@ article p {
   @media screen 
   and (min-width: 1024px)  { 
     main#home-page {
-        width: 60%;
         margin: auto;
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -99,7 +96,6 @@ article p {
 @media screen 
   and (min-width: 1440px)  { 
     main#home-page {
-        width: 50%;
         margin: auto;
         display: grid;
         grid-template-columns: 2fr 1fr;

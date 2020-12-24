@@ -4,7 +4,6 @@ main#about-page {
     background-color: lighten(base.$siteBackColor, 10%);
     color: base.$siteTextColor;
     padding: 1em;
-    border: 1px solid base.$siteBorderColor;
 }
 
 section.content {
@@ -33,7 +32,6 @@ article p span.aside {
 
 @media (min-width: 768px) {
     main#about-page {
-        width: 90%;
         margin: auto;
     }
 
@@ -43,7 +41,6 @@ article p span.aside {
 @media screen 
   and (min-width: 1024px)   {
     main#about-page {
-        width: 60%;
         margin: auto;
     }
 

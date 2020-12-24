@@ -1,10 +1,12 @@
 @use '../base';
 
 header {
+    position: sticky;
+    top: 0;
     background-color: base.$siteBackColor;
     display: grid;
     grid-template-columns: 3fr  1fr;
-    
+    border-bottom: 1px solid base.$siteBorderColor;
  }
   
 #content-container {

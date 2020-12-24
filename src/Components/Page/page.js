@@ -3,6 +3,7 @@ import './page.scss'
 import Header from '../Header'
 import {HomePage, AboutPage } from '../Body'
 import Menu from '../Header/Nav/Menu'
+import Footer from '../Footer'
 import { HashRouter, Switch, Route } from 'react-router-dom'
 
 
@@ -45,6 +46,7 @@ function Page(props) {
                         <HomePage />    
                     </Route>
                 </Switch>
+                <Footer />
             </HashRouter>
     )
 }
