@@ -4,7 +4,7 @@ import Header from '../Header'
 import {HomePage, AboutPage } from '../Body'
 import Menu from '../Header/Nav/Menu'
 import Footer from '../Footer'
-import { HashRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 
 const headerContent = {
@@ -29,7 +29,7 @@ const headerLinks = [
 
 function Page(props) {
         return (
-            <HashRouter basename='/'>
+            <Router basename='/'>
                 <Header content={headerContent} links={headerLinks} />
                 <Switch>
                     <Route path="/main-menu">
@@ -41,13 +41,15 @@ function Page(props) {
                     <Route path="/about">
                         <AboutPage  />    
                     </Route>
-                    
+                    <Route path="/me">
+                        <AboutPage  />    
+                    </Route>
                     <Route exact path="/">
                         <HomePage />    
                     </Route>
                 </Switch>
                 <Footer />
-            </HashRouter>
+            </Router>
     )
 }
 
