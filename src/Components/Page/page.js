@@ -1,10 +1,10 @@
 import './page.scss'
 
 import Header from '../Header'
-import {HomePage, AboutPage } from '../Body'
+import {HomePage, AboutPage, BlogPage } from '../Body'
 import Menu from '../Header/Nav/Menu'
 import Footer from '../Footer'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import {Switch, Route, useLocation } from 'react-router-dom'
 
 
 const headerContent = {
@@ -21,22 +21,33 @@ const headerLinks = [
         navTo: '/about',
         text:'About'
     }, {
-        navTo: '/tech',
+        navTo: '/tech?article=blip',
         // need the Unicode instead of &nbsp; since react escapes variable text
         text:'Tech\u00a0Blog'
     }
 ]
 
+function useQuery() {
+    const loc = useLocation()
+    if(!loc) return
+    
+    const q = loc.search
+    if(!q) return
+    
+    const params = new URLSearchParams(q)
+    return params.get('article')
+}
+
 function Page(props) {
         return (
-            <Router basename='/'>
+            <div>
                 <Header content={headerContent} links={headerLinks} />
                 <Switch>
                     <Route path="/main-menu">
                         <Menu />
                     </Route>
                     <Route path="/tech">
-                        <HomePage />    
+                        <BlogPage article={useQuery()}/>    
                     </Route>
                     <Route path="/about">
                         <AboutPage  />    
@@ -49,8 +60,8 @@ function Page(props) {
                     </Route>
                 </Switch>
                 <Footer />
-            </Router>
-    )
+            </div>
+   )
 }
 
 export default Page

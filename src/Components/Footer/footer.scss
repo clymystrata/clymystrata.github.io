@@ -6,5 +6,6 @@ footer {
     background-color: base.$siteBackColor;
     padding: .5em 1em;
     font-size: smaller;
-    border-top: 1px solid base.$siteBorderColor;
+    border-top: 3px ridge lighten(base.$siteBorderColor, 30%);
+    min-height: 5vh;
 }

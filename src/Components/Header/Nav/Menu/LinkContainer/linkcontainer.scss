@@ -2,10 +2,12 @@
 
 div#links {
     list-style: none;
-    margin: 0;
+    margin-left: auto;
+    margin-right: 0;
     padding: 0;
     background-color: darken(base.$siteBackColor,10%);
     border: 1px solid base.$siteBorderColor;
+    width: max-content;
 }
 
 .main-menu:target div,

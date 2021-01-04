@@ -6,7 +6,8 @@ function LinkContainer(props) {
     return (
         <div id="links">
             {links.map((link, i) => 
-                <LinkItem navTo =       {link.navTo}
+                <LinkItem key   =       {`link${link.id}_${i}`}
+                          navTo =       {link.navTo}
                           id    =       {link.id}
                           className =   'linkitem'
                           text  =       {link.text} 

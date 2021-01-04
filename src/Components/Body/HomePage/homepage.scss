@@ -2,18 +2,21 @@
 
 main#home-page {
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: .5fr 1fr;
     background-color: lighten(base.$siteBackColor, 10%);
     color: base.$siteTextColor;
-    padding: 1em;
+    padding: 0 1em;
 }
 
 section.content {
     padding: .5em;
+    height: min-content;
 }
 
 section.photo {
     width: 98%;
+    height: min-content;
+    padding: 1em 0 0 0;
 }
 
 div.frame {
@@ -29,7 +32,6 @@ div.frame {
 
 .photo .frame img {
     margin:0;
-    padding: 0;
     border: thin base.$boxShadow;
     width: 100%;
     height: auto;
@@ -57,6 +59,7 @@ article p {
         margin: auto;
         display: grid;
         grid-template-columns: 2fr 1fr;
+        grid-template-rows: 0;
     }
 
     div.frame {
@@ -71,6 +74,7 @@ article p {
         margin: auto;
         display: grid;
         grid-template-columns: 2fr 1fr;
+        grid-template-rows: 0;
     }
 
     div.frame {
@@ -85,6 +89,7 @@ article p {
         margin: auto;
         display: grid;
         grid-template-columns: 2fr 1fr;
+        grid-template-rows: 0;
     }
 
     div.frame {
@@ -99,6 +104,7 @@ article p {
         margin: auto;
         display: grid;
         grid-template-columns: 2fr 1fr;
+        grid-template-rows: 0;
     }
 
     div.frame {
@@ -106,4 +112,12 @@ article p {
         height: 569px;
     }
 }
+
+@media (max-height: 400px) {
+    div.frame {
+        width: 200px;
+        height: 250px;
+    }
+}
+
 

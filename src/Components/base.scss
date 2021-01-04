@@ -113,7 +113,7 @@ $boxShadow:           darken($siteBorderColor, 25%);
 
 body {
   color: $siteTextColor;
-  background-color: $siteBackColor;
+  background-color: lighten($siteBackColor, 10%);
 }
 
 

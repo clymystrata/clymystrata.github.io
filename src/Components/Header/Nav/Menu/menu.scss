@@ -2,11 +2,14 @@
 
 .main-menu {
     position: absolute;
-    top: 35px;
-    right: 5px;
     transition: right 0.3s ease,
                 box-shadow 0.3s ease;
     z-index: 999;
+    height: 100%;
+    width: 100%;
+    justify-content: right;
+
+
 }
 
 /*
@@ -30,8 +33,6 @@
     .main-menu {
         display: block;
         position: relative;
-        top: 5px;
-        right: 5px;
         left: auto;
         @include base.prefix(box-shadow, none !important, moz webkit);
     }
