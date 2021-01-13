@@ -109,7 +109,7 @@ $deviceBreakpoints: (
 @mixin deviceSize($size) {
   @if map-has-key($deviceBreakpoints, $size) {
     $sValue: map.get($deviceBreakpoints, $size);
-    @media only screen and (min-width: $sValue) {  
+    @media only screen and (min-width: $sValue + 1) {  
       @content;
     }
   }
