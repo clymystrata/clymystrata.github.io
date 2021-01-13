@@ -8,15 +8,13 @@ header {
     grid-template-columns: 3fr  1fr;
     border-bottom: 3px ridge lighten(base.$siteBorderColor, 30%);
     min-height: 8vh;
+
+    @include base.deviceSize('tablet') {
+        padding: 0;
+        margin: 0;
+    }
  }
   
 #content-container {
     grid-column: 1;
 }
-
-@media (min-width: 768px) {
-    header {
-        padding: 0;
-        margin: 0;
-    }
-}  

@@ -3,30 +3,22 @@
 div#links {
     list-style: none;
     margin-left: auto;
-    margin-right: 0;
+    margin-right: 2px;
     padding: 0;
     background-color: darken(base.$siteBackColor,10%);
     border: 1px solid base.$siteBorderColor;
     width: max-content;
-}
 
-.main-menu:target div,
-.main-menu[aria-expanded="true"] div {
-  position: relative;
-  z-index: 1000;
-}
-
-
-@media (min-width: 768px) {
-
-div#links {
-    display: grid;
-    grid-template-columns: fit-content(33%) fit-content(33%) fit-content(33%);
-    width:min-content;
-    margin:0 0 0 auto;
-    background: none;
-    border: none;
- 
-  }
+    position: relative;
+    z-index: 1000;
+    
+    @include base.deviceSize('tablet') {
+      display: grid;
+      grid-template-columns: fit-content(33%) fit-content(33%) fit-content(33%);
+      width:min-content;
+      margin:0 0 0 auto;
+      background: none;
+      border: none;
+    }
 }
  

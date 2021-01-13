@@ -1,3 +1,4 @@
+@use "sass:map";
 /*************** Custom Pallet ***************/
 /* SCSS RGB *//*
 $space-cadet: rgba(30, 45, 72, 1);
@@ -79,7 +80,9 @@ $shadow: rgba(145, 119, 84, 1);
 $bittersweet-shimmer: rgba(181, 86, 84, 1);
 
 
-
+/***************************************************
+ ******************* Color Theme *******************
+ ***************************************************/
 $siteBackColor:       $champagne-pink;
 $siteTextColor:       $cafe-noir;
 $siteAccentColor:     $shadow;
@@ -89,6 +92,28 @@ $siteHeadingColor:    lighten($siteTextColor, 25%);
 $siteLinkHover:       lighten($siteLinkColor, 50%);
 $siteBorderColor:     darken($siteAccentColor, 25%);
 $boxShadow:           darken($siteBorderColor, 25%);
+
+/***************************************************
+ ******************* Device Breakpoints ************
+ ***************************************************/
+
+$deviceBreakpoints: (
+  "phone"   : 340px,
+  "tablet"  : 768px,
+  "laptop"  : 900px,
+  "desktop" : 1200px,
+  "large"   : 1440px
+);
+
+
+@mixin deviceSize($size) {
+  @if map-has-key($deviceBreakpoints, $size) {
+    $sValue: map.get($deviceBreakpoints, $size);
+    @media only screen and (min-width: $sValue) {  
+      @content;
+    }
+  }
+}
 
 
 @mixin dropShadow($color, $blur) {
@@ -111,11 +136,21 @@ $boxShadow:           darken($siteBorderColor, 25%);
   @include dropShadow($siteTextColor, 0);
 }
 
+
+@mixin forSize($breakpoint) {
+
+}
+
+
 body {
   color: $siteTextColor;
   background-color: lighten($siteBackColor, 10%);
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
 
 
 

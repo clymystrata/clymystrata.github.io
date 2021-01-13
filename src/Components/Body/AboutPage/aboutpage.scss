@@ -4,6 +4,11 @@ main#about-page {
     background-color: lighten(base.$siteBackColor, 10%);
     color: base.$siteTextColor;
     padding: 1em;
+
+    @include base.deviceSize(laptop) {
+        margin: auto;
+    }
+    
 }
 
 section.content {

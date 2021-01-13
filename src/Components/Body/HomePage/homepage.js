@@ -16,7 +16,7 @@ function HomePage(props) {
                 </section>
                 <section className="photo">
                     <div className="frame">
-                        <img src={photo} alt="featured"></img>
+                        <img src={photo} alt="featured" height="1024px" width="819px"></img>
                     </div>
                 </section>
             </main>

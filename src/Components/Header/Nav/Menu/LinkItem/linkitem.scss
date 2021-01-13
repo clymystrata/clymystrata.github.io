@@ -7,31 +7,25 @@ a.linkitem {
     font-size: 1em;
     color: base.$siteLinkColor;
     text-decoration: none;
-}
 
-a.linkitem:hover,
-a.linkitem:focus {
-    color: base.$siteLinkHover;
-    outline: 0;
-    border: 0;
-}
+    @include base.deviceSize('tablet') {
+      display: inline;
+      border: 0 !important; /* Remove borders from off-canvas styling */
+      color: base.$siteLinkColor;
+      padding: .5em 1em;
+      line-height: .5em;
+      font-size: 1em;
+    }
+    
+    &:hover,
+    &:focus {
+      color: base.$siteLinkHover;
+      outline: 0;
+      border: 0;
 
-
-
-@media (min-width: 768px) {
-    a.linkitem {
-        border: 0 !important; /* Remove borders from off-canvas styling */
-        color: base.$siteLinkColor;
-        padding: .5em 1em;
-        line-height: .5em;
-        font-size: 1em;
-        display: inline-block;
-      }
-
-      a.linkitem:hover,
-      a.linkitem:focus {
-        background: none; /* Remove background from off-canvas styling */
+      @include base.deviceSize('tablet') {
+        background: none; 
         color: lighten(base.$siteLinkHover,25%);
       }
-
+    }
 }

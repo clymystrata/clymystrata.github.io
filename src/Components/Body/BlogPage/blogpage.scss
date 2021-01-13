@@ -6,35 +6,37 @@ main#blog-page {
     color: base.$siteTextColor;
     padding: 1em;
     line-height: 1.25;
+    
+    h1 {
+        @include base.pageTitle();
+        margin: .5em 0;
+    }
+
+    h2 {
+        font-size: 1.25em;
+        margin: 1.5em 0 .75em 0;
+    }
+    
+    p {
+        margin: 1.25em 0;
+    }
+
+    pre {
+        margin: 0;
+        padding: 1em .5em;
+        background-color: lighten(base.$siteBackColor, 20%);
+        border: 1px groove base.$siteBorderColor;
+    }
+
+    code {
+        display: block;
+        height: min-content;
+        overflow: auto;
+        font-size: smaller;
+    }
+
 }
 
-#blog-page h1 {
-    @include base.pageTitle();
-    margin: .5em 0;
-}
-
-#blog-page h2 {
-    font-size: 1.25em;
-    margin: 1.5em 0 .75em 0;
-}
-
-#blog-page p {
-    margin: 1.25em 0;
-}
-
-#blog-page pre {
-    margin: 0;
-    padding: 1em .5em;
-    background-color: lighten(base.$siteBackColor, 20%);
-    border: 1px groove base.$siteBorderColor;
-}
-
-#blog-page code {
-    display: block;
-    height: min-content;
-    overflow: auto;
-    font-size: smaller;
-}
 
 @media (max-width: 600px) {
 
