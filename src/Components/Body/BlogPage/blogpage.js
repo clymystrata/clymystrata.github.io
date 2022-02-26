@@ -44,16 +44,17 @@ class BlogPage extends React.Component {
     }
     
     componentDidMount() {
-        const m404 = `<h1>Four Hundred and Four</h1><h2>Yeah... That's not a thing...</h2>`
+        const m404 = `<h1>Four Hundred and Four</h1><h2>Yeah, that's not a thing.</h2>`
         
         console.log(this.props)
         axios.get(`/api/articles/${this.props.article}`)
-             .then( res => {
+            .then( res => {
+                console.log(res)
                 this.setState({blog: res.data || m404})
-             }).catch( err => {
-                 console.log(err)
-                 this.setState({blog: m404})
-             })
+            }).catch( err => {
+                console.log(`Error: ${err}`)
+                this.setState({blog: m404})
+            })
     }
 
     render() {
