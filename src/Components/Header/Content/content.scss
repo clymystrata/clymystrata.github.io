@@ -1,0 +1,36 @@
+@use '../../base';
+
+#content-container {
+    padding: .5em;
+    line-height: .75;
+  
+    h1 {
+      font-family: Philosopher;
+      font-size: 1.75em;
+      letter-spacing: .05em;
+      margin: 0;
+      font-weight: 800;
+ 
+      @include base.dropShadow(base.$siteTextColor, 2px);
+
+      a {
+        text-decoration: none;
+        color: base.$siteHeadingColor;
+  
+        &:hover {
+          color: lighten(base.$siteHeadingColor, 50%);
+        }
+      }
+    }
+    
+    h2 {
+        font-family: Roboto;
+        font-size: small;
+        color: darken(base.$siteHeadingColor, 10%);
+        margin: 1em 0 0 0;
+        padding-left: 1.25em;
+        letter-spacing: .05em;
+        font-weight: normal;
+    }
+  }
+  

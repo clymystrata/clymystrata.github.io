@@ -1,0 +1,52 @@
+@use '../../base';
+
+main#about-page {
+    background-color: lighten(base.$siteBackColor, 10%);
+    color: base.$siteTextColor;
+    padding: 1em;
+
+    @include base.deviceSize(laptop) {
+        margin: auto;
+    }
+    
+}
+
+section.content {
+    padding: .5em;
+}
+
+article h3 {
+    @include base.pageTitle();
+    margin: .5em 0 ;
+}
+
+article p {
+    padding: 0 .5em;
+}
+
+article p span.h3 {
+@include base.pageTitle();
+}
+
+article p span.aside {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1em;
+}
+
+
+@media (min-width: 768px) {
+    main#about-page {
+        margin: auto;
+    }
+
+
+}  
+
+@media screen 
+  and (min-width: 1024px)   {
+    main#about-page {
+        margin: auto;
+    }
+
+}

@@ -1,0 +1,24 @@
+@use '../../../base';
+
+.main-menu {
+    position: absolute;
+    transition: right 0.3s ease,
+                box-shadow 0.3s ease;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    justify-content: right;
+
+    &:target {
+      display: block;
+      outline: none;
+      @include base.prefix(box-shadow, 0 0 3px base.$boxShadow, moz webkit);
+    }
+
+    @include base.deviceSize('tablet') {
+      display: block;
+      position: relative;
+      left: auto;
+      @include base.prefix(box-shadow, none !important, moz webkit);
+    }
+}

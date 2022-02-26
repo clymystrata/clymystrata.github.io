@@ -1,0 +1,20 @@
+@use '../base';
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: base.$siteBackColor;
+    display: grid;
+    grid-template-columns: 3fr  1fr;
+    border-bottom: 3px ridge lighten(base.$siteBorderColor, 30%);
+    min-height: 8vh;
+
+    @include base.deviceSize('tablet') {
+        padding: 0;
+        margin: 0;
+    }
+ }
+  
+#content-container {
+    grid-column: 1;
+}

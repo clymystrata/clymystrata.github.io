@@ -1,0 +1,11 @@
+@use '../../../base';
+
+#nav-container {
+    position: relative;
+    grid-column: 2;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: right;
+}
+  

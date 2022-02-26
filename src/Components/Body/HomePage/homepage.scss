@@ -1,0 +1,123 @@
+@use '../../base';
+
+main#home-page {
+    display: grid;
+    grid-template-rows: .5fr 1fr;
+    background-color: lighten(base.$siteBackColor, 10%);
+    color: base.$siteTextColor;
+    padding: 0 1em;
+}
+
+section.content {
+    padding: .5em;
+    height: min-content;
+}
+
+section.photo {
+    width: 98%;
+    height: min-content;
+    padding: 1em 0 0 0;
+}
+
+div.frame {
+    margin: auto;
+    border: solid 2px base.$siteBorderColor;
+    padding: 3px;
+    width: 200px;
+    height: 250px;
+    background-color: base.$siteAccentColor;
+    @include base.prefix(box-shadow, 1px 2px 3px base.$boxShadow, moz webkit);
+   
+}
+
+.photo .frame img {
+    margin:0;
+    border: thin base.$boxShadow;
+    width: 100%;
+    height: auto;
+    @include base.prefix(box-shadow, 0 0 3px base.$boxShadow, moz webkit);
+}
+
+article h3 {
+    @include base.pageTitle();
+    margin: .25em 0 1em 0;
+}
+
+article p {
+    padding: 0 .5em;
+}
+
+@media (min-width: 400px) {
+    div.frame {
+        width: 300px;
+        height: 375px;
+    }
+}
+
+@media (min-width: 640px) {
+    main#home-page {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 0;
+    }
+
+    div.frame {
+        width: 300px;
+        height: 375px;
+    }
+    
+ }
+
+@media (min-width: 768px) {
+    main#home-page {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 0;
+    }
+
+    div.frame {
+        width: 330px;
+        height: 413px;
+    }
+  }
+
+  @media screen 
+  and (min-width: 1024px)  { 
+    main#home-page {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 0;
+    }
+
+    div.frame {
+        width: 380px;
+        height: 474px;
+    }
+}
+
+@media screen 
+  and (min-width: 1440px)  { 
+    main#home-page {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 0;
+    }
+
+    div.frame {
+        width: 456px;
+        height: 569px;
+    }
+}
+
+@media (max-height: 400px) {
+    div.frame {
+        width: 200px;
+        height: 250px;
+    }
+}
+
+
